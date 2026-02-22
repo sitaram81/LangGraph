@@ -32,5 +32,5 @@ print(final_state)
 #answer
 #{'height': 1.73, 'weight': 80, 'bmi': 26.729927495071667}
 
-from Ipython.display import Image
+from IPython.display import Image
 Image(workflow.get_graph().draw_mermaid_png())
