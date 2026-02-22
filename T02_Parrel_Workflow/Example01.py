@@ -24,22 +24,22 @@ def calculate_StrikeRate(state: BatsmanState) -> BatsmanState:
     stikerate = (state['run']/state['balls'])*100
     state['strike_rate']=stikerate  
     # return state will through error as 
-	 # simultenously update on same state not possible
-	 # return in Dict format to update partially
+    # simultenously update on same state not possible
+	# return in Dict format to update partially
     return {'strike_rate': stikerate}
 
 def calculate_bpb(state: BatsmanState) -> BatsmanState:
     bps = state['balls']/(state['fours']+state['sixes'])
     state['ballspersboundary']=bps
     # return state will through error as 
-	 # simultenously update on same state not possible
-	 # return in Dict format to update partially
+	# simultenously update on same state not possible
+	# return in Dict format to update partially
     return {'ballsperboundary': bps}    
 
 def calculate_boundary_percent(state: BatsmanState) -> BatsmanState:
     boundary_percentage=((state['fours']+state['sixes'])/state['balls'])*100    
     state['boundary_percentage']=boundary_percentage
-   # return state will through error as 
+    # return state will through error as 
 	# simultenously update on same state not possible
 	# return in Dict format to update partially
     return {'boundary_percentage': boundary_percentage}
